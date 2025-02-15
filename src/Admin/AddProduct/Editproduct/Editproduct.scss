@@ -1,0 +1,101 @@
+.edit-product-form {
+    background-color: #e9effd;
+    /* Lighter background for the form */
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    .MuiTypography-root {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .MuiGrid-root {
+            .MuiTextField-root {
+                width: 100%;
+                border-radius: 8px;
+                background-color: #fff;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+            }
+
+            .MuiButton-root {
+                border-radius: 8px;
+                padding: 12px;
+                background-color: #3f51b5;
+                color: white;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: #303f9f;
+                }
+            }
+
+            input[type="file"] {
+                display: block;
+                width: 100%;
+                padding: 10px 2px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                margin-top: 10px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: border-color 0.3s ease-in-out;
+
+                &:hover {
+                    border-color: #3f51b5;
+                }
+            }
+
+            img {
+                margin-top: 10px;
+                border-radius: 8px;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border: 2px solid #ddd;
+            }
+        }
+
+        .MuiCircularProgress-root {
+            margin: 0 auto;
+        }
+    }
+
+    .error-message {
+        color: #e57373;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .edit-product-form {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    form {
+        gap: 15px;
+    }
+
+    .MuiButton-root {
+        font-size: 14px;
+    }
+
+    input[type="file"] {
+        padding: 8px 15px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}

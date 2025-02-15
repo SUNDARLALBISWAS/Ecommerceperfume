@@ -1,0 +1,237 @@
+// .dashboard-container {
+//     padding: 2rem;
+//     background-color: #f5f5f5;
+
+//     .search-field {
+//         margin-right: 1rem;
+//     }
+
+//     .add-product-button {
+//         background-color: #1976d2;
+//         color: #fff;
+
+//         &:hover {
+//             background-color: #125a9d;
+//         }
+//     }
+
+//     .dashboard-heading {
+//         text-align: center;
+//         font-size: 2.5rem;
+//         margin-bottom: 2rem;
+
+//         .tricolor-heading {
+//             background: linear-gradient(90deg, #ff5733, #ffd700, #28a745);
+//             -webkit-background-clip: text;
+//             -webkit-text-fill-color: transparent;
+//             font-weight: bold;
+//         }
+//     }
+
+//     .dashboard-table-container {
+//         max-width: 1000px;
+//         margin: auto;
+//         border-radius: 8px;
+//         overflow: hidden;
+//         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+//         .table-header {
+//             font-weight: bold;
+//             color: #ffffff;
+//             background-color: #1976d2;
+//             padding: 1rem;
+//             font-size: 1.1rem;
+//         }
+
+//         .table-row {
+//             transition: background-color 0.3s ease;
+
+//             &:nth-child(even) {
+//                 background-color: #f8f8f8;
+//             }
+
+//             &:hover {
+//                 background-color: #e3f2fd;
+//             }
+//         }
+
+//         .MuiAvatar-root {
+//             width: 60px !important;
+//             height: 60px !important;
+//             border-radius: 50%;
+//             object-fit: cover;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             overflow: hidden;
+//             border: 2px solid #1976d2;
+//         }
+
+//         .product-name {
+//             font-size: 1rem;
+//             color: #333;
+//             text-align: center;
+//         }
+
+//         .action-button {
+//             margin: 0 0.5rem;
+//             font-size: 0.875rem;
+//             padding: 0.5rem 1rem;
+//             transition: all 0.3s ease;
+
+//             &:hover {
+//                 transform: scale(1.05);
+//             }
+
+//             &.view-button {
+//                 background-color: #4caf50;
+//                 color: #ffffff;
+//                 box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+//             }
+
+//             &.edit-button {
+//                 background-color: #ffb300;
+//                 color: #ffffff;
+//                 box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+//             }
+
+//             &.delete-button {
+//                 background-color: #f44336;
+//                 color: #ffffff;
+//                 box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+//             }
+//         }
+//     }
+// }
+
+.dashboard-container {
+    padding: 2rem;
+    background-color: #f5f5f5;
+
+    // Dashboard Heading
+    .dashboard-heading {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+
+        .tricolor-heading {
+            background: linear-gradient(90deg, #ff5733, #ffd700, #28a745);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    }
+
+    // Search Field
+    .search-field {
+        margin-right: 1rem;
+    }
+
+    // Add Product Button
+    .add-product-button {
+        background-color: #1976d2;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #125a9d;
+        }
+    }
+
+    // Dashboard Table Container
+    .dashboard-table-container {
+        max-width: 1000px;
+        margin: auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+        // Table Header
+        .table-header {
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #1976d2;
+            padding: 1rem;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        // Table Rows
+        .table-row {
+            transition: background-color 0.3s ease;
+
+            &:nth-child(even) {
+                background-color: #f8f8f8;
+            }
+
+            &:hover {
+                background-color: #e3f2fd;
+            }
+        }
+
+        // Avatar Styling
+        .MuiAvatar-root {
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 50%;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid #1976d2;
+        }
+
+        // Product Name Styling
+        .product-name {
+            font-size: 1rem;
+            color: #333;
+            text-align: center;
+        }
+
+        // Action Buttons Styling
+        .action-button {
+            margin: 0 0.5rem;
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            &.view-button {
+                background-color: #4caf50;
+
+                &:hover {
+                    background-color: darken(#4caf50, 10%);
+                }
+            }
+
+            &.edit-button {
+                background-color: #ffb300;
+
+                &:hover {
+                    background-color: darken(#ffb300, 10%);
+                }
+            }
+
+            &.delete-button {
+                background-color: #f44336;
+
+                &:hover {
+                    background-color: darken(#f44336, 10%);
+                }
+            }
+        }
+    }
+}

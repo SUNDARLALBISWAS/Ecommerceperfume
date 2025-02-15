@@ -1,0 +1,88 @@
+$primary-color: #ff69b4;
+$secondary-color: #8a2be2;
+$background-color: #f0f2f5;
+$card-shadow: rgba(0, 0, 0, 0.1);
+$card-hover-shadow: rgba(0, 0, 0, 0.3);
+
+.add-to-cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; // Center container vertically
+  min-height: 77vh; // Full height for vertical centering
+  padding: 30px;
+  background-color: $background-color;
+
+  .cart-header {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    align-items: center; // Center items in container
+
+    .cart-item-card {
+      display: flex;
+      padding: 15px;
+      box-shadow: 0 4px 8px $card-shadow;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+      background-color: #fff;
+      width: 100%;
+      max-width: 500px;
+      position: relative;
+
+      &:hover {
+        box-shadow: 0 8px 16px $card-hover-shadow;
+        transform: translateY(-5px);
+      }
+
+      .cart-item-media {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+        object-fit: cover;
+        border: 3px solid $primary-color;
+      }
+
+      .cart-item-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        .item-name {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: $secondary-color;
+        }
+
+        .item-brand {
+          color: #888;
+          font-size: 0.9rem;
+          font-style: italic;
+        }
+
+        .item-price {
+          color: $primary-color;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

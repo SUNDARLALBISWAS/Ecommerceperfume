@@ -1,0 +1,93 @@
+/* Footer.scss */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Center the footer */
+    box-sizing: border-box;
+
+    .footer-top {
+        margin-bottom: 20px;
+
+        .footer-heading {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #FF69B4;
+            /* Pink accent color */
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 8px;
+
+                a {
+                    color: #FF69B4;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: #DA70D6;
+                    }
+                }
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+
+            .MuiIconButton-root {
+                color: #FF69B4;
+                transition: transform 0.3s ease, color 0.3s ease;
+
+                &:hover {
+                    color: #DA70D6;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #444;
+        padding-top: 10px;
+
+        p {
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px;
+        /* Full padding for smaller screens */
+    }
+
+    .footer-top {
+        text-align: center;
+
+        .footer-heading {
+            font-size: 1.2rem;
+        }
+
+        .footer-text {
+            font-size: 0.85rem;
+        }
+    }
+}

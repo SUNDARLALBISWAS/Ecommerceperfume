@@ -1,0 +1,131 @@
+/* Contact.scss */
+
+/* Set the background color for the whole contact page */
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    min-height: 100vh;
+    /* Make sure the page takes the full height */
+}
+
+/* Container for the whole form and content */
+.contact-container {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gradient styling for the heading */
+.contact-heading {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #8A2BE2, #DA70D6, #FF69B4);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Subtitle styling */
+.contact-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Style for each card container (form and location) */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        /* Hover effect */
+    }
+}
+
+/* Form input fields */
+.input-field {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+
+    &:focus {
+        border-color: #8A2BE2;
+        outline: none;
+    }
+}
+
+/* Submit button styling */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF69B4;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #E35B50;
+    }
+}
+
+/* Map iframe styling */
+.map-container {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 15px;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+}
